@@ -2,6 +2,10 @@ output "static_upload_bucket_id" {
   value = module.statics_deploy.static_upload_bucket_id
 }
 
+output "static_bucket_id" {
+  value = module.statics_deploy.static_bucket_id
+}
+
 output "proxy_config_store_bucket_id" {
   value = module.proxy_config.proxy_config_store_bucket_id
 }
