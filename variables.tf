@@ -196,11 +196,11 @@ variable "debug_use_local_packages_dir" {
 variable "debug_use_local_packages_deploy_trigger_path_to_file" {
   description = "deploy trigger packages path to file."
   type        = string
-  default     = 'dist.zip'
+  default     = "dist.zip"
 }
 
 variable "debug_use_local_packages_proxy_path_to_file" {
   description = "proxy packages path to file."
   type        = string
-  default     = 'dist.zip'
+  default     = "dist.zip"
 }
