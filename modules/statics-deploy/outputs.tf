@@ -14,6 +14,14 @@ output "static_bucket_arn" {
   value = aws_s3_bucket.static_deploy.arn
 }
 
+output "static_upload_bucket_endpoint" {
+  value = aws_s3_bucket.static_upload.bucket_regional_domain_name
+}
+
 output "static_upload_bucket_id" {
   value = aws_s3_bucket.static_upload.id
+}
+
+output "static_upload_bucket_arn" {
+  value = aws_s3_bucket.static_upload.arn
 }
