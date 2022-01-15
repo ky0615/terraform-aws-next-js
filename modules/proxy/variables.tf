@@ -37,6 +37,11 @@ variable "debug_use_local_packages" {
   default = false
 }
 
+variable "debug_use_local_path_to_file" {
+  type = string
+  default = "dist.zip"
+}
+
 variable "tf_next_module_root" {
   type = string
 }

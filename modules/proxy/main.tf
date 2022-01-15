@@ -4,7 +4,7 @@ module "proxy_package" {
 
   module_name    = "@millihq/terraform-next-proxy"
   module_version = var.proxy_module_version
-  path_to_file   = "dist.zip"
+  path_to_file   = var.debug_use_local_path_to_file
   use_local      = var.debug_use_local_packages
   local_cwd      = var.tf_next_module_root
 }

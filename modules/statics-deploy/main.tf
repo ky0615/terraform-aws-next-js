@@ -165,7 +165,7 @@ module "lambda_content" {
 
   module_name    = "@millihq/terraform-next-deploy-trigger"
   module_version = var.deploy_trigger_module_version
-  path_to_file   = "dist.zip"
+  path_to_file   = var.debug_use_local_path_to_file
   use_local      = var.debug_use_local_packages
   local_cwd      = var.tf_next_module_root
 }

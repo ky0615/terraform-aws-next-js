@@ -186,3 +186,21 @@ variable "debug_use_local_packages" {
   type        = bool
   default     = false
 }
+
+variable "debug_use_local_packages_dir" {
+  description = "Relative path to the local packages dir."
+  type        = string
+  default     = path.module
+}
+
+variable "debug_use_local_packages_deploy_trigger_path_to_file" {
+  description = "deploy trigger packages path to file."
+  type        = string
+  default     = 'dist.zip'
+}
+
+variable "debug_use_local_packages_proxy_path_to_file" {
+  description = "proxy packages path to file."
+  type        = string
+  default     = 'dist.zip'
+}
