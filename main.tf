@@ -46,7 +46,7 @@ module "statics_deploy" {
   tags_s3_bucket  = var.tags_s3_bucket
 
   debug_use_local_packages = var.debug_use_local_packages
-  tf_next_module_root      = var.debug_use_local_packages_dir
+  tf_next_module_root      = var.debug_use_local_packages_dir == null ? path.module : var.debug_use_local_packages_dir
   debug_use_local_path_to_file = var.debug_use_local_packages_deploy_trigger_path_to_file
 }
 
@@ -203,7 +203,7 @@ module "proxy" {
   tags            = var.tags
 
   debug_use_local_packages = var.debug_use_local_packages
-  tf_next_module_root      = var.debug_use_local_packages_dir
+  tf_next_module_root      = var.debug_use_local_packages_dir == null ? path.module : var.debug_use_local_packages_dir
   debug_use_local_path_to_file = var.debug_use_local_packages_proxy_path_to_file
 
   providers = {

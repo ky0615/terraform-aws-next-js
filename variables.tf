@@ -190,7 +190,7 @@ variable "debug_use_local_packages" {
 variable "debug_use_local_packages_dir" {
   description = "Relative path to the local packages dir."
   type        = string
-  default     = path.module
+  default     = null
 }
 
 variable "debug_use_local_packages_deploy_trigger_path_to_file" {
