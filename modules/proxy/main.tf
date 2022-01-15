@@ -2,7 +2,7 @@ module "proxy_package" {
   source  = "milliHQ/download/npm"
   version = "2.0.0"
 
-  module_name    = "@millihq/terraform-next-proxy"
+  module_name    = var.debug_use_local_packages ? "." : "@millihq/terraform-next-proxy"
   module_version = var.proxy_module_version
   path_to_file   = var.debug_use_local_path_to_file
   use_local      = var.debug_use_local_packages

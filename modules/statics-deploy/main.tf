@@ -163,7 +163,7 @@ module "lambda_content" {
   source  = "milliHQ/download/npm"
   version = "2.0.0"
 
-  module_name    = "@millihq/terraform-next-deploy-trigger"
+  module_name    = var.debug_use_local_packages ? "." : "@millihq/terraform-next-deploy-trigger"
   module_version = var.deploy_trigger_module_version
   path_to_file   = var.debug_use_local_path_to_file
   use_local      = var.debug_use_local_packages
